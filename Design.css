@@ -25,12 +25,58 @@
     color: black;
 }
 
+/* Spiele */
+#spiele {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.spiel {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spiel-info {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.spiel-info h3 {
+    margin: 0;
+}
+
 /* Spiel-Button */
 .play-button {
     background-color: green;
     color: white;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
 }
 
+.play-button span {
+    margin-right: 5px;
+}
+
+.play-button:hover {
+    background-color: darkgreen;
+}
+
+.spiel-link {
+    display: block;
+    width: 100%;
+}
+
+.spiel img {
+    width: 100%;
+    border-radius: 5px;
+}
