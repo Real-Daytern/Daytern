@@ -1,12 +1,12 @@
 /* Header */
 .header {
-    background-color: #F1F1F1;
-    text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #0077FF;
+    text-align: left;
+    font-family: Cambria;
 }
 
 p {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria;
 }
 
 /* Navigation Bar */
