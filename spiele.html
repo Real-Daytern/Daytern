@@ -3,148 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alle Spiele - Daytern</title>
+    <title>Entdecke Spiele | Daytern</title>
     <link rel="stylesheet" href="Design.css">
+    <link rel="stylesheet" href="SpieleDesign.css">
 </head>
 <body>
     <header class="header">
-        <h1>Alle Spiele von Daytern</h1>
         <nav class="topnav">
-            <ul>
-                <li><a href="index.html">Zurück</a></li>
+            <div class="logo-container">
+                <img src="Ui-Elemente/DayternSchrift.png" alt="Beispielbild">
+            </div>
+            <ul class="no-bullets">
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="https://www.youtube.com/@daytern?sub_confirmation=1" target=_blank>Videos</a></li>
+                <li><a href="spiele.html">Spiele</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
             </ul>
+            <div class="placeholder"></div>
         </nav>
     </header>
 
+    <main class="content">
+    <!-- Filter Section -->
+    <section id="filter-section">
+        <h2>Filtere nach Kategorie</h2>
+        <div class="filter-container">
+            <button class="filter-button" data-category="all">Alle</button>
+            <button class="filter-button" data-category="adventure">Abenteuer</button>
+            <button class="filter-button" data-category="action">Action</button>
+            <button class="filter-button" data-category="horror">Horror</button>
+            <button class="filter-button" data-category="fighting">Kämpfen</button>
+            <button class="filter-button" data-category="parkour">Parkour</button>
+            <button class="filter-button" data-category="sandbox">Sandbox</button>
+            <button class="filter-button" data-category="simulation">Simulation</button>
+            <button class="filter-button" data-category="strategy">Strategie</button>
+            <button class="filter-button" data-category="survival">Survival</button>
+            <button class="filter-button" data-category="tycoon">Tycoon</button>
+            <!-- Weitere Kategorien hinzufügen -->
+        </div>
+    </section>
+
+    <!-- Games Section -->
     <section id="all-games">
         <h2>Spiele</h2>
         <div class="spiel-container">
-            <div class="spiel">
+            <div class="spiel" data-category="adventure,parkour,fighting">
                 <div class="spiel-image">
-                    <img src="Alchemy_Acent.png" alt="Alchemy Ascent">
+                    <img src="GameIcons/Dragon_Academy.png">
+                </div>
+                <div class="spiel-info">
+                    <h3>Dragon Academy</h3>
+                </div>
+                <a href="roblox://placeId=18145722250&launchData=siteplay" class="play-button">
+                    <span>▶</span>
+                </a>
+            </div>
+            <div class="spiel" data-category="tycoon">
+                <div class="spiel-image">
+                    <img src="GameIcons/Alchemy_Acent.png">
                 </div>
                 <div class="spiel-info">
                     <h3>Alchemy Ascent</h3>
                 </div>
-                <a href="https://www.roblox.com/games/16935947142/Alchemy-Ascent" target="_blank" class="play-button">
+                <a href="roblox://placeId=16935947142&launchData=siteplay" class="play-button">
                     <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="horror,fighting">
+                <div class="spiel-image">
+                    <img src="GameIcons/Murderer_of_Illusions.png">
+                </div>
                 <div class="spiel-info">
                     <h3>Murderer of Illusions</h3>
-                    <p>Entwirre die Rätsel in der Welt der Illusionen. Kannst du die Wahrheit hinter den Morden finden?</p>
                 </div>
-                <div class="spiel-image">
-                    <img src="murderer_of_illusions.jpg" alt="Murderer of Illusions">
-                </div>
-                <a href="https://www.roblox.com/games/16111605239/Murderer-of-Illusions" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=16111605239&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="adventure,simulation">
+                <div class="spiel-image">
+                    <img src="GameIcons/Find_Out.png">
+                </div>
                 <div class="spiel-info">
                     <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=15757940613&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="">
+                <div class="spiel-image">
+                    <img src="GameIcons/Dayterns_Game_Universe.png">
+                </div>
                 <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
+                    <h3>Dayterns Game Universe</h3>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=14039902919&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="strategy,adventure">
+                <div class="spiel-image">
+                    <img src="GameIcons/Tower_Triumph.png">
+                </div>
                 <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
+                    <h3>Tower Triumph</h3>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=15229086701&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="action">
+                <div class="spiel-image">
+                    <img src="GameIcons/Gloryland.png">
+                </div>
                 <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
+                    <h3>Gloryland</h3>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=8585075734&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="sandbox">
+                <div class="spiel-image">
+                    <img src="GameIcons/VidVerse.png">
+                </div>
                 <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
+                    <h3>VidVerse (Videos in 3D)</h3>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=14759040706&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="parkour">
+                <div class="spiel-image">
+                    <img src="GameIcons/Obby_through_Europe.png">
+                </div>
                 <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
+                    <h3>Obby through Europe</h3>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=14541728142&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="action,simulation">
+                <div class="spiel-image">
+                    <img src="GameIcons/Stunt_Point.png">
+                </div>
                 <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
+                    <h3>Stunt Point</h3>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=14274265214&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
+            <div class="spiel" data-category="horror">
+                <div class="spiel-image">
+                    <img src="GameIcons/Time_Gates.png">
+                </div>
                 <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
+                    <h3>Time Gates</h3>
                 </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span> Auf Roblox spielen
+                <a href="roblox://placeId=13820405195&launchData=siteplay" class="play-button">
+                    <span>▶</span>
                 </a>
             </div>
-            
+            <div class="spiel" data-category="adventure">
+                <div class="spiel-image">
+                    <img src="GameIcons/Cart_Ride.png">
+                </div>
+                <div class="spiel-info">
+                    <h3>Cart Ride Around the World</h3>
+                </div>
+                <a href="roblox://placeId=13477103120&launchData=siteplay" class="play-button">
+                    <span>▶</span>
+                </a>
+            </div>
+            <div class="spiel" data-category="survival,strategy">
+                <div class="spiel-image">
+                    <img src="GameIcons/Twighlighted_Wild.png">
+                </div>
+                <div class="spiel-info">
+                    <h3>Twighlighted Wild</h3>
+                </div>
+                <a href="roblox://placeId=12667629870&launchData=siteplay" class="play-button">
+                    <span>▶</span>
+                </a>
+            </div>
+            <div class="spiel" data-category="tycoon">
+                <div class="spiel-image">
+                    <img src="GameIcons/Boost_your_Pika.png">
+                </div>
+                <div class="spiel-info">
+                    <h3>Boost your Pika</h3>
+                </div>
+                <a href="roblox://placeId=12259995296&launchData=siteplay" class="play-button">
+                    <span>▶</span>
+                </a>
+            </div>
+            <div class="spiel" data-category="fighting">
+                <div class="spiel-image">
+                    <img src="GameIcons/SkyFighters.png">
+                </div>
+                <div class="spiel-info">
+                    <h3>SkyFighters</h3>
+                </div>
+                <a href="roblox://placeId=11766055108&launchData=siteplay" class="play-button">
+                    <span>▶</span>
+                </a>
+            </div>
             <!-- Weitere Spiele hier hinzufügen -->
         </div>
     </section>
-
+    </main>
     <footer>
         <p>© 2024 Daytern. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script src="filterScript.js"></script>
 </body>
 </html>

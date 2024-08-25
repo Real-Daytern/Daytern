@@ -1,135 +1,474 @@
-/* Header */
-.header {
-    background-color: #0077FF;
-    text-align: left;
-    font-family: Cambria;
+/* Farbpalette */
+:root {
+    --primary-color: #0077FF;
+    --secondary-color: #00BBFF;
+    --accent-color: #32CD32; /* Lime Green */
+    --dark-color: #333;
+    --light-background: #f0f0f5;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-hover-color: #28A745; /* Darker Lime Green */
 }
 
+/* General Body and Font */
 body {
-  font-family: Cambria;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-background);
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Navigation Bar */
-.topnav {
+.-webkit-scrollbar {
+    display: none;
     overflow: hidden;
-    background-color: #333;
+}
+
+h2 {
+    margin-left: 2rem;
+    color: var(--primary-color);
+}
+
+/* Top Navigation Bar */
+.topnav {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.placeholder {
+    flex: 1;
+}
+
+.topnav img {
+    max-height: 40px;
+    margin-right: 20px;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
 
 .topnav a {
-    float: left;
-    display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0.875rem 1.25rem;
     text-decoration: none;
+    display: block;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--primary-color);
 }
 
-/* Spiele */
-#spiele, #all-games {
-    position: relative;
-    overflow: hidden; /* Hide the scroll bar */
+
+/* Banner Section */
+#banner {
+    margin-top: 60px; /* Compensate for the fixed header */
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 60px;
+    box-shadow: 0 4px 10px var(--shadow-color);
 }
 
-.spiel-container {
+#banner h2 {
+    margin-top: 60px;
+    font-size: 2rem;
+}
+
+
+/* Gallery */
+.gallery-wrap {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto 1.25rem auto; /* Top margin for the sticky header */
+    position: relative;
+    padding: 0 1rem;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    max-width: 60rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.gallery-item {
+    flex: none;
+    width: 100%; /* Each item takes full viewport width */
+    display: flex;
+    justify-content: center;
+    scroll-snap-align: center; /* Align items to the center */
+    transition: transform 0.5s ease;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Navigation Arrows for Gallery */
+#backBtn, #nextBtn {
+    width: 50px;
+    filter: sepia(100%) saturate(1000%) brightness(140%) hue-rotate(160deg);
+    cursor: pointer;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+#backBtn:hover, #nextBtn:hover {
+    transform: scale(1.15);
+    filter: sepia(100%) saturate(1000%) brightness(140%) hue-rotate(60deg);
+}
+
+
+/* Recommendation Section */
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    padding-bottom: 20px; /* Abstand für die Scrollbar */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    scroll-behavior: smooth; /* Ensures smooth scrolling */
+    margin: 2rem;
+}
+
+.recommendation-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.2rem;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.recommendation-card img {
+    height: 8rem; /* Increase the image height slightly */
+    object-fit: contain;
+    margin-bottom: 0rem; /* Adjust margin below the image for spacing */
+}
+
+.card-content {
+    text-align: center; /* Center the text */
+}
+
+.card-content h3 {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.card-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Spiele Section */
+.spiel-container {
+    margin-left: 2rem;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto a new row */
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    position: relative;
 }
 
 .spiel {
     flex-shrink: 0;
     width: 200px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 340px; /* Increased height to accommodate two lines of text */
+}
+
+.spiel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
 }
 
 .spiel-info {
-    padding: 5px;
+    padding: 10px;
     text-align: center;
-}
-
-.spiel-info h3 {
-    margin-top: 0;
+    background: var(--light-background);
+    border-radius: 0 0 10px 10px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* Ensure consistent height for title area */
 }
 
 .spiel-image {
     text-align: center;
+    padding: 10px;
+    flex-grow: 1; /* Allows the image section to grow and take available space */
 }
 
 .spiel-image img {
     max-width: 100%;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
-/* Spiel-Button */
 .play-button {
-    background-color: #00bf24;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 0;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 10px 10px;
     font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: var(--button-hover-color);
 }
 
 .play-button span {
     margin-right: 5px;
 }
 
-/* Scroll Buttons */
+/* News Container Styling */
+.news-container {
+    margin: 80px auto; /* Adjust for header space */
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--shadow-color);
+    overflow: hidden;
+}
+
+/* Individual News Item Styling */
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.news-thumbnail img {
+    margin-left: 10px;
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.news-content h2 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.news-content p {
+    margin: 0.5rem 0;
+    color: var(--dark-color);
+}
+
+/* News Link Styling */
+.news-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-link:hover .news-item {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.read-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--button-hover-color);
+}
+
+/* Separator Line */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--shadow-color);
+    margin: 20px 0;
+}
+
+/* Article Container Styling */
+.article-container {
+    margin: 100px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.article-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.article-container .article-date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.article-container .article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.article-container h2 {
+    color: var(--accent-color);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.article-container p {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    line-height: 1.7;
+}
+
+/* Scroll Buttons for Game Section */
 #scroll-left, #scroll-right {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-#scroll-left {
-    left: 10px;
-}
-
-#scroll-right {
-    right: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #scroll-left:hover, #scroll-right:hover {
-    background-color: #555;
+    background-color: var(--button-hover-color);
+    transform: translateY(-50%) scale(1.1);
 }
 
-/* Hide horizontal scroll bar but still make it scrollable */
-.spiel-container::-webkit-scrollbar {
-    display: none;
+#scroll-left {
+    left: 0;
 }
 
-.spiel-container {
-    -ms-overflow-style: none;  /* IE und Edge */
-    scrollbar-width: none;  /* Firefox */
+#scroll-right {
+    right: 0;
 }
 
-/* "Zeig alle" Button */
-.zeig-alle {
-    font-size: 16px;
-    float: right;
-    padding: 10px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
+html, body {
+    height: 100%; /* Vollständige Höhe des Viewports */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    /* Body füllt den Viewport und lässt Platz für den Footer */
+    flex: 1;
+}
+
+/* Hauptinhalt */
+main.content {
+    flex: 1; /* Stellt sicher, dass der Inhalt den verfügbaren Platz einnimmt */
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 -2px 10px var(--shadow-color);
+    font-size: 14px;
+    margin-top: auto; /* Schiebt den Footer nach unten, wenn der Inhalt zu wenig ist */
 }

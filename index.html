@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daytern</title>
+    <title>Daytern: Ein Universum voller Welten</title>
     <link rel="stylesheet" href="Design.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="topnav">
-            <ul>
-                <li><a href="#home">Daytern</a></li>
+            <div class="logo-container">
+                <img src="Ui-Elemente/DayternSchrift.png" alt="Beispielbild">
+            </div>
+            <ul class="no-bullets">
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="https://www.youtube.com/@daytern?sub_confirmation=1" target=_blank>Videos</a></li>
+                <li><a href="spiele.html">Spiele</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
             </ul>
-            <ul>
-                <li><a href="#spiele">Spiele</a></li>
-            </ul>
-        </nav>
+            <div class="placeholder"></div>
+        </nav>        
     </header>
+
+    <div class="gallery-wrap">
+        <img src="Ui-Elemente/back.png" id="backBtn" alt="Back">
+        <div class="gallery">
+            <div class="gallery-item">
+                <span><a href="https://www.roblox.com/de/games/18145722250"><img src="Karussellbilder/ChinesischesErlebnisBild.png" alt="Chinese Video"></a></span>
+            </div>
+            <div class="gallery-item">
+                <span><a href="NewsArtikel/artikel2.html"><img src="Karussellbilder/GameglowProject.png" alt="Sparkle Image"></a></span>
+            </div>
+            <div class="gallery-item">
+                <span><a href="https://example.com"><img src="Karussellbilder/GamePassBilder.png" alt="Purchase"></a></span>
+            </div>
+            <div class="gallery-item">
+                <span><a href="https://example.com"><img src="Karussellbilder/GeschichtenBild.png" alt="Chinese Image"></a></span>
+            </div>
+        </div>
+        <img src="Ui-Elemente/next.png" id="nextBtn" alt="Next">
+    </div>
 
     <section id="home">
         <h2>Empfohlen</h2>
-        <p>Daytern</p>
+        <div class="recommendation-grid">
+            <div class="recommendation-card">
+                <img src="Ui-Elemente/HubSymbol.png" alt="Beispielbild">
+                <div class="card-content">
+                    <h3>Trete der Hub bei</h3>
+                    <p>Finde schnell das <b>passende Spiel </b> für dich.</p>
+                    <a href="roblox://placeId=14039902919&launchData=siteplay" class="card-button">Mehr erfahren</a>
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <img src="Ui-Elemente/PassSymbol.png" alt="Beispielbild">
+                <div class="card-content">
+                    <h3>Hol' dir den Universe-Pass</h3>
+                    <p>Ein Pass, monatliche <b>Vorteile in allen 15 Spielen</b>.</p>
+                    <a href="#" class="card-button">Mehr erfahren</a>
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <img src="Ui-Elemente/VideoSymbol.png" alt="Beispielbild">
+                <div class="card-content">
+                    <h3>Schau' dir exklusive Videos an</h3>
+                    <p><b>Aufwändige Videos</b> zu den Spielen auf dem Daytern-Kanal.</p>
+                    <a href="https://www.youtube.com/@daytern?sub_confirmation=1" target="_blank" class="card-button">Mehr erfahren</a>
+                </div>
+            </div>
+            <!-- Weitere Empfehlungskarten hinzufügen -->
+        </div>
     </section>
+
     <section id="videos">
         <h2>Videos</h2>
-        <iframe width="500" height="281"src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
+
     <section id="spiele">
-        <h2>Spiele <a href="spiele.html" class="zeig-alle">Zeig alle</a></h2>
+        <h2>Spiele</h2>
         <button id="scroll-left">←</button>
         <div class="spiel-container">
+            <!-- Spielkarten Container -->
             <div class="spiel">
                 <div class="spiel-image">
-                    <img src="Alchemy_Acent.png" alt="Alchemy Ascent">
+                    <img src="GameIcons/Alchemy_Acent.png" alt="Alchemy Ascent">
                 </div>
                 <div class="spiel-info">
                     <h3>Alchemy Ascent</h3>
@@ -43,193 +99,27 @@
                 </a>
             </div>
             <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Murderer of Illusions</h3>
-                    <p>Entwirre die Rätsel in der Welt der Illusionen. Kannst du die Wahrheit hinter den Morden finden?</p>
-                </div>
                 <div class="spiel-image">
-                    <img src="murderer_of_illusions.jpg" alt="Murderer of Illusions">
+                    <img src="GameIcons/Another_Game.png" alt="Another Game">
                 </div>
-                <a href="https://www.roblox.com/games/16111605239/Murderer-of-Illusions" target="_blank" class="play-button">
+                <div class="spiel-info">
+                    <h3>Another Game</h3>
+                </div>
+                <a href="#" target="_blank" class="play-button">
                     <span>▶</span>
                 </a>
             </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Deeplinking Test</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="roblox://placeId=6900305353&launchData=%7B%22roomId%22%3A%202%7D" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Eigenes Spiel Deeplinking</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="roblox://placeId=16935947142&launchData=siteplay" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <div class="spiel">
-                <div class="spiel-info">
-                    <h3>Find Out</h3>
-                    <p>Erkunde und finde heraus, was dich in diesem spannenden Abenteuer erwartet.</p>
-                </div>
-                <div class="spiel-image">
-                    <img src="find_out.jpg" alt="Find Out">
-                </div>
-                <a href="https://www.roblox.com/games/15757940613/Find-out" target="_blank" class="play-button">
-                    <span>▶</span>
-                </a>
-            </div>
-            <!-- Weitere Spiele hier hinzufügen -->
+            <!-- Weitere Spiele können hier hinzugefügt werden -->
         </div>
         <button id="scroll-right">→</button>
     </section>
+
     <footer>
         <p>© 2024 Daytern. Alle Rechte vorbehalten.</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="aktuellesScroll.js"></script>
 </body>
+
 </html>

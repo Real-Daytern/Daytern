@@ -1,0 +1,29 @@
+/* Filter Section */
+#filter-section {
+    margin-top: 3.5rem;
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+    padding: 20px;
+}
+
+.filter-container {
+    display: flex; /* Use flexbox for the internal layout */
+}
+
+.filter-button {
+    padding: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: var(--accent-color);
+}
