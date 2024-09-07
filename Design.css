@@ -85,6 +85,46 @@ ul.no-bullets {
     color: var(--primary-color);
 }
 
+/* Dunkler Modus */
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.topnav.dark-mode {
+    background: linear-gradient(90deg, #1f1f1f, #2c2c2c);
+}
+
+.card-background.dark-mode {
+    background-color: #2e2e2e;
+}
+
+.news-container.dark-mode {
+    background-color: #2e2e2e;
+}
+
+.recommendation-card.dark-mode {
+    background-color: #2e2e2e;
+}
+
+footer.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.mode-toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+.mode-toggle-button img {
+    width: 30px;
+    height: 30px;
+}
+
 
 /* Banner Section */
 #banner {
