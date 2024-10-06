@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modeIcon = document.getElementById('modeIcon');
     const body = document.body;
 
-    // Check for saved mode in localStorage
     const currentMode = localStorage.getItem('mode') || 'light';
     if (currentMode === 'dark') {
         body.classList.add('dark-mode');
